@@ -1,16 +1,76 @@
 import UIKit
 
-// variables
+// Variables
 
 //var highScore = 26
 //highScore = 27
+//
+//var str = "Hello, playground"
+//str = "Goodbye!"
+//
+//var population = 8_000_000
+//population = 80_00_000
+//
+//var str1 = """
+//This goes
+//over multiple
+//lines
+//"""
+//
+//var str2 = """
+//This goes \
+//over multiple \
+//lines
+//"""
+//
+//var pi = 3.1415
+//var awesome = true
+//
+//var myInt = 1
+//var myDouble = 1.0
+//
+//var precisionTest = 0.1 + 0.1 + 0.1 == 0.3 // false
 
-//let name = "Edwin"
+//var score = 85
+//var str = "Your score was \(score)"
+//var results = "The test results are here: \(str)"
+//
+//// Constants
+//
+////let name = "Edwin"
+//let edwin = "cardenas"
+//
+//// Type Annotations
+//
+//let album: String = "Reputation"
+//let year: Int = 2024
+//let height: Double = 1.80
+//let taylorRocks: Bool = true
+
+//var teams1 = [String: String]()
+//teams1["Paul"] = "Red"
+//
+//var teams2: [String: String] = [:]
+//teams2["Paul"] = "Red"
+//
+//var results1 = [Int]()
+//var results2: [Int] = []
+//
+//var words = Set<String>()
+//var numbers = Set<Int>()
+//
+//var scores = Dictionary<String, Int>()
+//var results = Array<Int>()
 
 // Arrays
 
+//let beatles = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
+//beatles[1]
+//
 //var ages: [Int] = [26, 85, 70, 12, 1, 9, 2, 0]
-
+//
+//print(ages)
+//
 //ages.count
 //ages.first
 //ages.last
@@ -27,57 +87,801 @@ import UIKit
 //print(ages)
 //
 //ages.reverse()
+//print(ages)
 //
 //ages.shuffle()
-//
 //print(ages)
-
+//
 //let highScores: [Int] = [100, 99, 82, 15]
-
-//highScores.append(55) // error, cannot mutate an immutable value
-
+//
+////highScores.append(55) // error, cannot mutate an immutable value
+//
 //print(highScores)
  
 // Sets
 
 //var ages = [18, 33, 55, 17, 94, 26, 33, 17]
-
-//var agesSet: Set<Int> = []
+//
+////var agesSet: Set<Int> = []
 //var agesSet = Set(ages)
-
+//
 //agesSet.contains(17)
 //agesSet.insert(170)
 //agesSet.contains(170)
 //
 //print(agesSet)
 
+// Tuples
+
+//var name = (first: "Edwin", last: "Edwin")
+//
+//print(name.0)
+//print(name.first)
+//print(name.last)
+
 // Dictionaries
 
 //let devices: [String: String] = [
-//    "phone": "iPhone X",
+//    "phone": "iPhone 11",
 //    "laptop": "2021 Macbook Pro"
 //]
 //
 //print(devices)
-//devices["laptop"]
-
+//print(devices["laptop"])
+//
 //let favoriteIceCream: [String: String] = [
 //    "Edwin": "Chocolate",
-//    "Ana Maria": "Strawberry"
+//    "Milagros": "Strawberry"
 //]
 //
 //favoriteIceCream["Edwin"]
 //favoriteIceCream["Keyla"] // nil
 //favoriteIceCream["Irene", default: "Unknown"]
 
+// Enums
+
+//enum Result {
+//    case success
+//    case failure
+//}
+//
+//let result1 = Result.failure
+//let result2: Result = .success
+//
+//enum Activity {
+//    case bored
+//    case running(destination: String)
+//    case talking(topic: String)
+//    case singing(volume: Int)
+//}
+//
+//let talking = Activity.talking(topic: "programming")
+//print(talking)
+//
+//enum Weather {
+//    case sunny
+//    case windy(speed: Int)
+//    case rainy(chance: Int, amount: Int)
+//}
+//
+//enum Planet: Int {
+//    case mercury = 1 // automatically starts from 0, so we use a custom value and swift infers the rest
+//    case venus
+//    case earth
+//}
+//
+//let earth = Planet(rawValue: 3)
+
+// Operators
+
+//let firstScore = 12
+//let secondScore = 4
+//
+//let total = firstScore + secondScore
+//let difference = firstScore - secondScore
+//
+//let product = firstScore * secondScore
+//let divided = firstScore / secondScore
+//
+//let remainder = 13 % secondScore
+//
+////let value: Double = 90000000000000001
+//let value: Int = 90000000000000001
+//
+//let weeks = 465 / 7 // 66
+////let weeks: Double = 465 / 7 // 66.42857142857143
+//
+////print("There are \(weeks) weeks until the event.")
+//
+//let days = 465 % 7
+//
+//print("There are \(weeks) weeks and \(days) days until the event.")
+//
+//let number = 465
+//let isMultiple = number.isMultiple(of: 7)
+//
+//var score = 95
+//score -= 5
+//
+//print(score)
+
+// Conditionals
+
+//let firstCard = 11
+//let secondCard = 10
+//
+//if firstCard + secondCard == 2 {
+//    print("Aces - Lucky!")
+//} else if firstCard + secondCard == 21 {
+//    print("Blackjack!")
+//} else {
+//    print("Regular cards.")
+//}
+
+//enum Sizes: Comparable {
+//    case small
+//    case medium
+//    case large
+//}
+//
+//let first = Sizes.small
+//let second = Sizes.large
+//
+//print(first < second)
+//print(first > second)
+
+//let age1 = 12
+//let age2 = 21
+//
+//if age1 > 18 && age2 > 18 {
+//    print("Both are over 18.")
+//}
+//
+//if age1 > 18 || age2 > 18 {
+//    print("At least one is over 18.")
+//}
+
+// Switch case
+
+//let weather = "sunny"
+//
+//switch weather {
+//case "rain":
+//    print("Bring an umbrella.")
+//case "snow":
+//    print("Wrap up warm")
+//case "sunny":
+//    print("Wear sunscreen")
+//    
+//    fallthrough
+//default:
+//    print("Enjoy your day!")
+//}
+
+// Ranges
+
+//let score = 85
+//
+//switch score {
+//case 0..<50:
+//    print("You failed badly.")
+//case 50..<85:
+//    print("You did okay.")
+//default:
+//    print("You did great!")
+//}
+//
+//let names = ["Alex", "Gloria", "Marty", "Melman"]
+//
+//// closed range
+//print(names[0...3]) // ["Alex", "Gloria", "Marty", "Melman"]
+//// half-open range
+//print(names[0..<3]) // ["Alex", "Gloria", "Marty"]
+//// one-sided range
+//print(names[0...]) // ["Alex", "Gloria", "Marty", "Melman"]
+
+// Loops
+
+//let count = 1...10
+//
+//for number in count {
+//    print("The current number is \(number)")
+//}
+
+//let albums = ["Red", "1989", "Reputation"]
+//
+//for album in albums {
+//    print("\(album) is on Apple Music")
+//}
+
+//print("Players gonna...")
+//
+//for _ in 0..<5 {
+//    print("play")
+//}
+//
+//print("Haters gonna...")
+//
+//for _ in 1...5 {
+//    print("hate")
+//}
+
+//let names = ["Sterling", "Cyril", "Lana", "Ray", "Pam"]
+//
+//for _ in names {
+//    print("[CENSORED] is a secret agent!")
+//}
+
+//var number = 1
+//
+//while number <= 20 {
+//    print(number)
+//    
+//    number += 1
+//}
+//
+//print("Ready or not, here I come!")
+
+//var number = 1
+//
+//repeat {
+//    print(number)
+//    
+//    number += 1
+//} while number <= 20
+//
+//print("Ready or not, here I come!")
+
+//while false {
+//    print("This is false")
+//}
+//
+//repeat {
+//    print("This is false")
+//} while false
+
+//var countDown = 10
+//
+//while countDown >= 0 {
+//    print(countDown)
+//    
+//    if countDown == 4 {
+//        print("I'm bored. Let's go now!")
+//        
+//        break
+//    }
+//    
+//    countDown -= 1
+//}
+//
+//print("Blast off!")
+
+// outerLoop is a labeled statement
+//outerLoop: for i in 1...10 {
+//    for j in 1...10 {
+//        let product = i * j
+//        
+//        print("\(i) * \(j) = \(product)")
+//        
+//        if product == 50 {
+//            print("It's a bullseye!")
+//            
+//            break outerLoop
+//        }
+//    }
+//}
+
+//for i in 1...10 {
+//    if i % 2 == 1 {
+//        continue
+//    }
+//    
+//    print(i)
+//}
+
+//var counter = 0
+//
+//while true {
+//    print(" ")
+//    
+//    counter += 1
+//    
+//    if counter == 273 {
+//        break
+//    }
+//}
+
 // Functions
+
+//func printHelp() {
+//    let message = """
+//Welcome to MyApp!
+//
+//Run this app inside a directory of images and
+//MyApp will resize them all into thumbnails
+//"""
+//    
+//    print(message)
+//}
+//
+//printHelp()
+//print()
+//printHelp()
+
+//func square(number: Int) {
+//    print(number * number)
+//}
+//
+//square(number: 5)
+//square(number: 10)
+
+//func square(number: Int) -> Int {
+//    return number * number
+//}
+
+//func square(number: Int) -> Int {
+//    number * number
+//}
+//
+//let result = square(number: 3)
+//
+//print(result)
+
+//func greet(name: String) -> String {
+//    if name == "Taylor Swift" {
+//        "Oh wow!"
+//    } else {
+//        "Hello, \(name)"
+//    }
+//}
+
+//func greet(name: String) -> String {
+//    let result = if name == "Taylor Swift" {
+//        "Oh wow!"
+//    } else {
+//        "Hello, \(name)"
+//    }
+//    
+//    return result
+//}
+
+//func greet(name: String) -> String {
+//    let result = name == "Taylor Swift" ? "Oh wow!" : "Hello, \(name)"
+//
+//    return result
+//}
+
+//func greet(name: String) -> String {
+//    name == "Taylor Swift" ? "Oh wow!" : "Hello, \(name)"
+//}
+//
+//print(greet(name: "Edwin"))
+//print(greet(name: "Taylor Swift"))
+
+//func getUser() -> (first: String, last: String) {
+//    return (first: "Taylor", last: "Swift")
+//}
+//
+//let user = getUser()
+//
+//print(user)
+//print(user.first)
+//print(user.last)
+
+//func sayHello(to name: String) -> String {
+//    "Hello, \(name)!"
+//}
+//
+//print(sayHello(to: "Edwin"))
+
+//func setAge(for person: String, to age: Int) {
+//    print("\(person) is now \(age)")
+//}
+//
+//setAge(for: "Edwin", to: 29)
+
+//func greet(_ name: String) {
+//    print("Hi \(name)!")
+//}
+//
+//greet("Edwin")
+
+//func greet(_ person: String, nicely: Bool = true) -> String {
+//    if nicely {
+//        "Hello, \(person)!"
+//    } else {
+//        "Oh no, is \(person) again..."
+//    }
+//}
+//
+//print(greet("Edwin"))
+//print(greet("Edwin", nicely: false))
+
+//func square(numbers: Int...) {
+//    for number in numbers {
+//        print("\(number) squared is \(number * number)")
+//    }
+//}
+//
+//square(numbers: 1, 2, 3, 4, 5)
+//square() // works!!!
+
+//enum PasswordError: Error {
+//    case obvious
+//}
+//
+//func checkPassword(_ password: String) throws -> Bool {
+//    if password == "Password" {
+//        throw PasswordError.obvious
+//    }
+//    
+//    return true
+//}
+//
+//do {
+//    try checkPassword("Password")
+//    
+//    print("That password if good!")
+//} catch {
+//    print("You can't use that password.")
+//}
+
+//func doubleInPlace(number: inout Int) {
+//    number *= 2
+//}
+//
+//var myNum = 10
+//
+//print(myNum)
+//doubleInPlace(number: &myNum)
+//print(myNum)
+
+// Closures
+
+//let driving = {
+//    print("I'm driving!")
+//}
+//
+//driving()
+
+//let driving = { (place: String) in
+//    print("I'm going to \(place) in my car")
+//}
+
+//driving("Santa Marta")
+//driving(place: "Santa Marta") // error, no parameter label required
+
+//let drivingWithReturn = { (place: String) -> String in
+//    return "I'm going to \(place) in my car"
+//}
+
+//let drivingWithReturn = { (place: String) -> String in
+//    "I'm going to \(place) in my car" // no return keyword required, just like regular functions
+//}
+//
+//let message = drivingWithReturn("Santa Marta")
+//
+//print(message)
+
+//let payment = { () -> Bool in
+//    print("Paying an anonymous person...")
+//    return true
+//}
+//
+//payment()
+
+//let driving = {
+//    print("I'm driving in my car.")
+//}
+//
+//func travel(action: () -> Void) {
+//    print("I'm getting ready to go.")
+//    action()
+//    print("I arrived!")
+//}
+//
+//travel(action: driving)
+//print()
+//travel() {
+//    print("I'm driving my motorcycle.")
+//}
+//print()
+//travel {
+//    print("I'm driving my bus.")
+//}
+
+//func animate(duration: Double, animations: () -> Void) {
+//    print("Starting a \(duration) second animation...")
+//    animations()
+//}
+//
+//animate(duration: 3, animations: {
+//    print("Fade out the image")
+//})
+//print()
+//animate(duration: 3) {
+//    print("Fade out the image")
+//}
+
+//func travel(action: (String) -> Void) {
+//    print("I'm getting ready to go.")
+//    action("London")
+//    print("I arrived!")
+//}
+//
+//travel { (place: String) in
+//    print("I'm going to \(place) in my car.")
+//}
+//
+//travel { place in
+//    print("I'm going to \(place) in my car.")
+//}
+
+//let changeSpeed = { (speed: Int) in
+//    print("Changing speed to \(speed)kph")
+//}
+//
+//func buildCar(name: String, engine: (Int) -> Void) {
+////
+//}
+
+//func travel(action: (String) -> String) {
+//    print("I'm getting ready to go.")
+//    
+//    let description = action("London")
+//    
+//    print(description)
+//    print("I arrived!")
+//}
+//
+//travel { (place: String) in
+//    return "I'm going to \(place) in my car."
+//}
+//print()
+//travel { place in
+//    "I'm going to \(place) in my car."
+//}
+
+//func reduce(_ values: [Int], using closure: (Int, Int) -> Int) -> Int {
+//    var current = values[0]
+//    
+//    for value in values[1...] {
+//        current = closure(current, value)
+//    }
+//    
+//    return current
+//}
+//
+//let numbers = [10, 20, 30]
+//
+//let sum1 = reduce(numbers) { total, current in
+//    total + current
+//}
+//let sum2 = reduce(numbers, using: +)
+//let product = reduce(numbers, using: *)
+//
+//print(sum1)
+//print(sum2)
+//print(product)
+
+//func travel(action: (String) -> String) {
+//    print("I'm getting ready to go.")
+//    
+//    let description = action("London")
+//    
+//    print(description)
+//    print("I arrived!")
+//}
+//
+//travel { place in
+//    "I'm going to \(place) in my car."
+//}
+//print()
+//travel {
+//    "I'm going to \($0) in my car."
+//}
+
+//func travel(action: (String, Int) -> String) {
+//    print("I'm getting ready to go.")
+//    
+//    let description = action("London", 60)
+//    
+//    print(description)
+//    print("I arrived!")
+//}
+//
+//travel { location, speed in
+//    "I'm going to \(location) at \(speed) miles per hour"
+//}
+//print()
+//travel {
+//    "I'm going to \($0) at \($1) miles per hour"
+//}
+
+//func travel() -> (String) -> Void {
+//    return {
+//        print("I'm going to \($0) in my car.")
+//    }
+//}
+//
+//let result = travel()
+//
+//result("London")
+
+//func travel() -> (String) -> Void {
+//    var counter = 1
+//    
+//    return {
+//        print("I'm going to \($0). It's my \(counter) destination this year.")
+//        counter += 1
+//    }
+//}
+//
+//let result = travel()
+//
+//result("London")
+//result("Medellin")
+//result("Bogota")
+
+//func makeRandomNumberGenerator() -> () -> Int {
+//    var previousValue = 0
+//    
+//    return {
+//        var newNumber: Int
+//        
+//        repeat {
+//            newNumber = Int.random(in: 1...3)
+//        } while newNumber == previousValue
+//        
+//        previousValue = newNumber
+//        
+//        return newNumber
+//    }
+//}
+//
+//let generator = makeRandomNumberGenerator()
+//
+//for _ in 1...10 {
+//    print(generator())
+//}
+
+// Structs
+
+//struct Sport {
+//    var name: String
+//}
+//
+//var tennis = Sport(name: "Tennis")
+//
+//print(tennis.name)
+//
+//tennis.name = "Lawn Tennis"
+//
+//print(tennis.name)
+
+//struct Sport {
+//    var name: String
+//    var isOlympicSport: Bool
+//    
+//    var olympicStatus: String {
+//        if isOlympicSport {
+//            return "\(name) is an Olympic sport."
+//        } else {
+//            return "\(name) is not an Olympic sport."
+//        }
+//    }
+//}
+//
+//let chessBoxing = Sport(name: "Chessboxing", isOlympicSport: false)
+//print(chessBoxing.olympicStatus)
+
+//struct Progress {
+//    var task: String
+//    var amount: Int {
+//        didSet {
+//            print("\(task) is now \(amount)% complete")
+//        }
+//    }
+//}
+//
+//var progress = Progress(task: "Loading data", amount: 0)
+//progress.amount = 30
+//progress.amount = 80
+//progress.amount = 100
+
+//struct City {
+//    var population: Int
+//
+//    func collectTaxes() -> Int {
+//        population * 1_000
+//    }
+//}
+//
+//let london = City(population: 9_000_000)
+//london.collectTaxes()
+
+//struct Person {
+//    var name: String
+//    
+//    mutating func makeAnonymous() {
+//        name = "Anonymous"
+//    }
+//}
+//
+//var person = Person(name: "Edwin")
+//print(person.name)
+//
+//person.makeAnonymous()
+//print(person.name)
+
+//let myString = "Do or do not, there is no try."
+//
+//print(myString.count)
+//print(myString.isEmpty)
+//print(myString.hasPrefix("Do"))
+//print(myString.hasSuffix("try."))
+//print(myString.uppercased())
+//print(myString.sorted())
+//print(myString.contains("there"))
+
+//var toys = ["Woody"]
+//
+//print(toys)
+//print(toys.count)
+//
+//toys.append("Buzz")
+//
+//print(toys)
+//print(toys.count)
+//
+//toys.firstIndex(of: "Buzz")
+//
+//print(toys.sorted())
+//print(toys)
+//
+//toys.remove(at: 0)
+//print(toys)
+
+//struct User {
+//    var name: String
+//    
+//    init() {
+//        name = "Anonymous"
+//        
+//        print("Creating a new user!")
+//    }
+//}
+//
+//var user = User()
+//print(user)
+//
+//user.name = "Edwin"
+//
+//print(user)
+
+//struct Employee {
+//    var name: String
+//    var yearsActive = 0
+//}
+//
+//extension Employee {
+//    init() {
+//        self.name = "Anonymous"
+//        print("Creating an anonymous employee...")
+//    }
+//}
+//
+//let roslin = Employee(name: "Laura Roslin")
+//let anon = Employee()
+
+
 
 //func printName(name: String) -> Void {
 //    print(name)
 //}
 //
 //printName(name: "Edwin Alexander ")
-//printName(name: "Ana Maria")
+//printName(name: "Milagros")
 //
 //func add(firstNumber: Int, to secondNumber: Int) -> Int {
 //    return firstNumber + secondNumber
@@ -1596,9 +2400,9 @@ import UIKit
 //    print("Casting has failed")
 //}
 
-var array1 = [1, 2, 3, 4, 5]
-let array2 = [6, 7, 8, 9, 10]
-
-array1 += array2
-
-print(array1)
+//var array1 = [1, 2, 3, 4, 5]
+//let array2 = [6, 7, 8, 9, 10]
+//
+//array1 += array2
+//
+//print(array1)
