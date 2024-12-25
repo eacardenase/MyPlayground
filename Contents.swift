@@ -1025,6 +1025,128 @@ import UIKit
 
 // class Poodle: Dog {} // compilation error
 
+// Protocols
+
+//protocol Identifiable {
+//    var id: String { get set }
+//}
+//
+//struct User: Identifiable {
+//    var id: String
+//}
+//
+//func displayID(thing: Identifiable) {
+//    print("My ID is \(thing.id)")
+//}
+
+//protocol Purchasable {
+//    var name: String { get set }
+//}
+//
+//struct Book: Purchasable {
+//    var name: String
+//    var author: String
+//}
+//
+//struct Movie: Purchasable {
+//    var name: String
+//    var actors: [String]
+//}
+//
+//struct Car: Purchasable {
+//    var name: String
+//    var manufacturer: String
+//}
+//
+//struct Coffee: Purchasable {
+//    var name: String
+//    var strength: Int
+//}
+//
+//func buy(_ item: Purchasable) {
+//    print("I'm buying \(item.name)")
+//}
+
+//protocol Payable {
+//    func calculateWages() -> Int
+//}
+//
+//protocol NeedsTraining {
+//    func study()
+//}
+//
+//protocol HasVacation {
+//    func takeVacation(days: Int)
+//}
+//
+//protocol Employee: Payable, NeedsTraining, HasVacation { }
+
+//protocol Product {
+//    var price: Double { get set }
+//    var weight: Int { get set }
+//}
+//
+//protocol Computer: Product {
+//    var cpu: String { get set }
+//    var memory: Int { get set }
+//    var storage: Int { get set }
+//}
+//
+//protocol Laptop: Computer {
+//    var screenSize: Int { get set }
+//}
+
+//extension Int {
+//    func squared() -> Int {
+//        return self * self
+//    }
+//}
+//
+//let number = 8
+//number.squared()
+//
+//extension Int {
+//    var isEven: Bool {
+//        return self % 2 == 0
+//    }
+//}
+//
+//number.isEven
+
+//let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
+//let beatles = Set(["John", "Ringo", "Paul", "George"])
+//
+//extension Collection {
+//    func summarize() {
+//        print("There are \(count) of us:")
+//        
+//        for name in self {
+//            print(name)
+//        }
+//    }
+//}
+//
+//pythons.summarize()
+//beatles.summarize()
+
+protocol Identifiable {
+    var id: String { get set }
+    func identify()
+}
+
+extension Identifiable {
+    func identify() {
+        print("My ID is \(id).")
+    }
+}
+
+struct User: Identifiable {
+    var id: String
+}
+
+let eacardenase = User(id: "eacardenase")
+eacardenase.identify()
+
 //func printName(name: String) -> Void {
 //    print(name)
 //}
